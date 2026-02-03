@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
+@theme {
+  --color-carbonblack: #1f1f1f;
+  --color-sand: #c1ad76;
+  --color-coolsteel: #819595;
+  --color-ashgrey: #c9cdc2;
+  --color-charcoal: #4d4d4d;
+  --color-white: #ffffff;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  --font-serif-heading: var(--font-playfair-sc), serif;
+  --font-sans-body: var(--font-montserrat), sans-serif;
+  --font-script: var(--font-great-vibes), cursive;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Variables predeterminadas para que el CRM no se rompa si usa estas claves */
+  --background: 80 10% 80%;
+  /* ash grey #c9cdc2 */
+  --foreground: 0 0% 12%;
+  /* carbon black #1f1f1f */
+
+  /* Variables extras */
+
+  /* Gold/Sand #c1ad76 */
+  --primary: 44 38% 61%;
+  --primary-foreground: 0 0% 12%;
+
+  /* Cool Steel #819595 */
+  --muted: 174 10% 54%;
+  --muted-foreground: 80 6% 70%;
+
+  /* Darker accent for cards */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 12%;
+
+  --border: 80 10% 75%;
+  --input: 80 10% 75%;
+  --ring: 43 35% 61%;
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Fuentes Personalizadas */
+.font-serif-heading {
+  font-family: var(--font-playfair-sc), serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-sans-body {
+  font-family: var(--font-montserrat), sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-script {
+  font-family: var(--font-great-vibes), cursive;
+}
+
+/* Botón Principal (Estilo Oro Rosado) */
+.btn-primary {
+  background-color: var(--color-charcoal);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-sand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 163, 129, 0.4);
+}
+
+/* Botón Secundario (Outline) */
+.btn-secondary {
+  border: 1px solid var(--color-coolsteel);
+  color: var(--color-coolsteel);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-coolsteel);
+  color: var(--color-carbonblack);
+}
+
+/* Botón Cotizar (Outline) */
+.btn-alternative {
+  border: 1px solid var(--color-ashgrey);
+  color: var(--color-coolsteel);
+  transition: all 0.3s ease;
+}
+
+.btn-alternative:hover {
+  background-color: var(--color-ashgrey);
+  color: var(--color-white);
+}
+
+/* Animaciones */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Degradado sutil para el Hero */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(193, 173, 118, 0.95) 0%, rgba(255, 248, 229, 0.9) 100%);
+  /* background: linear-gradient(45deg, #c1ad76,#fff8e5); */
+}
+
+/* Tamaño del logotipo */
+
+.website-logo {
+  width: 150px;
+}
+
+/* Efecto Hover en las tarjetas de ejemplo */
+
+.portfolio-card:hover .portfolio-img {
+  transform: scale(1.1);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+
 }
