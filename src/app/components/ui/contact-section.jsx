@@ -75,7 +75,7 @@ export default function ContactSection() {
         setResponse(null);
 
         try {
-            const res = await fetch('http://localhost:8000/api/public/contact/', {
+            const res = await fetch('https://api.palazzoinvites.com/api/public/contact/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
