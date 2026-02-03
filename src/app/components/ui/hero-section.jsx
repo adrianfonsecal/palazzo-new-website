@@ -141,9 +141,9 @@ const DashboardShowcase = () => {
                             );
                         })}
 
-                        <Button className="w-full sm:w-auto bg-sand text-carbonblack hover:bg-sand/90 px-8 py-6 rounded text-sm uppercase tracking-widest font-bold mt-8">
+                        <a href="#contacto" className="w-full sm:w-auto bg-sand text-carbonblack hover:bg-sand/90 px-8 py-6 rounded text-sm uppercase tracking-widest font-bold mt-8">
                             Solicita tu Demo
-                        </Button>
+                        </a>
                     </div>
                 </div>
             </div>
