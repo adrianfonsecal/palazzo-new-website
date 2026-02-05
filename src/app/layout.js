@@ -1,4 +1,5 @@
 import { Playfair_Display_SC, Montserrat, Great_Vibes } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google';
 import "./globals.css";
 
 const playfairSC = Playfair_Display_SC({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         className={`${playfairSC.variable} ${montserrat.variable} ${greatVibes.variable} antialiased`}
       >
         {children}
+        <GoogleTagManager gtmId="G-GTNW9NNKCK" />
       </body>
     </html>
   );

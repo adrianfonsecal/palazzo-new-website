@@ -27,6 +27,15 @@ const features = [
 ];
 
 const DashboardShowcase = () => {
+
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "529996382810"; // Agregamos lada 52 (MX) para asegurar compatibilidad
+        const message = encodeURIComponent("Quiero solicitar una demo de Palazzo Invites. ¡Gracias!");
+        const url = `https://wa.me/${phoneNumber}?text=${message}`;
+        
+        window.open(url, "_blank", "noopener,noreferrer");
+    };
+    
     return (
         <section id="hero" className="py-20 lg:py-28 bg-carbonblack text-card relative overflow-hidden">
             {/* Decorative elements */}
@@ -141,9 +150,10 @@ const DashboardShowcase = () => {
                             );
                         })}
 
-                        <a href="#contacto" className="w-full sm:w-auto bg-sand text-carbonblack hover:bg-sand/90 px-8 py-6 rounded text-sm uppercase tracking-widest font-bold mt-8">
+                        <button className="w-full sm:w-auto bg-sand text-carbonblack hover:bg-sand/90 px-8 py-6 rounded text-sm uppercase tracking-widest font-bold mt-8" 
+                        onClick={handleWhatsAppClick}>
                             Solicita tu Demo
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

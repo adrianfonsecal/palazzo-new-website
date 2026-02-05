@@ -54,6 +54,9 @@ const Footer = () => {
               <li>
                 <a href="mailto:contacto@palazzoinvites.com" className="hover:text-sand transition-colors">contacto@palazzoinvites.com</a>
               </li>
+              <li>
+                <a rel='nofollow' href='https://www.bodas.com.mx' title='Bodas.com.mx'><img alt='Bodas.com.mx' src='https://www.bodas.com.mx/images/sellos/Sello-bodasmx--gg430370.png' style={{borderWidth:0}} /></a>
+              </li>
             </ul>
           </div>
         </div>
