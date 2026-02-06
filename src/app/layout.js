@@ -25,6 +25,9 @@ const greatVibes = Great_Vibes({
 export const metadata = {
   title: "Palazzo Invites | Experiencias Digitales Premium para Bodas",
   description: "Palazzo Invites Landing Page",
+    other: {
+      "facebook-domain-verification": "4cy5dwfwui1gzedmykpn6hoc5tfjs6",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -32,6 +35,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></link>
+        <meta name="facebook-domain-verification" content="4cy5dwfwui1gzedmykpn6hoc5tfjs6" />
+
       </head>
       <body
         className={`${playfairSC.variable} ${montserrat.variable} ${greatVibes.variable} antialiased`}
